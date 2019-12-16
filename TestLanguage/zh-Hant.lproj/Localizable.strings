@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  TestLanguage
+
+  Created by syt on 2019/12/13.
+  Copyright © 2019 syt. All rights reserved.
+*/
+
+
+"button" = "按鈕";
+
+"label" = "繁體";
+
+"Internet" = "物聯網";
+
+"FollowSystemLanguage" = "跟隨系統";
+

@@ -7,8 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "TestLanguageViewController.h"
+
 
 @interface AppDelegate ()
+
+
+
 
 @end
 
@@ -17,7 +22,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setUpRootVC) name:@"language" object:nil];
+    [self setUpRootVC];
+    
     return YES;
+}
+
+- (void)setUpRootVC
+{
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[TestLanguageViewController new]];
+    self.window.rootViewController = nav;
 }
 
 
